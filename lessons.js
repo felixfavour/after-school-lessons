@@ -5,7 +5,7 @@ const lessons = [
     spaces: 5,
     price: 500,
     stars: 4,
-    image: '/images/swimming'
+    image: 'images/swimming.png'
   },
   {
     subject: 'Painting',
@@ -13,7 +13,7 @@ const lessons = [
     spaces: 5,
     price: 350,
     stars: 4,
-    image: '/images/painting'
+    image: 'images/painting.png'
   },
   {
     subject: 'Football',
@@ -21,7 +21,7 @@ const lessons = [
     spaces: 5,
     price: 750,
     stars: 5,
-    image: '/images/football'
+    image: 'images/football.png'
   },
   {
     subject: 'Basketball',
@@ -29,7 +29,7 @@ const lessons = [
     spaces: 5,
     price: 600,
     stars: 4,
-    image: '/images/basketball'
+    image: 'images/basketball.png'
   },
   {
     subject: 'Karate',
@@ -37,7 +37,7 @@ const lessons = [
     spaces: 5,
     price: 250,
     stars: 3,
-    image: '/images/karate'
+    image: 'images/karate.png'
   },
   {
     subject: 'Surfing',
@@ -45,7 +45,7 @@ const lessons = [
     spaces: 5,
     price: 450,
     stars: 2,
-    image: '/images/surfing'
+    image: 'images/surfing.png'
   },
   {
     subject: 'Chess',
@@ -53,7 +53,7 @@ const lessons = [
     spaces: 5,
     price: 150,
     stars: 3,
-    image: '/images/chess'
+    image: 'images/chess.png'
   },
   {
     subject: 'Scrabble',
@@ -61,7 +61,7 @@ const lessons = [
     spaces: 5,
     price: 50,
     stars: 4,
-    image: '/images/scrabble'
+    image: 'images/scrabble.png'
   },
   {
     subject: 'Dancing',
@@ -69,7 +69,7 @@ const lessons = [
     spaces: 5,
     price: 150,
     stars: 5,
-    image: '/images/dancing'
+    image: 'images/dancing.png'
   },
   {
     subject: 'Cooking',
@@ -77,6 +77,6 @@ const lessons = [
     spaces: 5,
     price: 200,
     stars: 3,
-    image: '/images/cooking'
+    image: 'images/cooking.png'
   }
 ]

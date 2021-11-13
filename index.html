@@ -24,10 +24,12 @@
         </button>
       </div>
     </div>
-    <div v-if="false" class="home-page">
+    <div v-if="showLessons" class="home-page">
       <div class="hero-banner">
-        <h2 class="text-1">Find <span>After School</span></h2>
-        <h2 class="text-2">activities here.</h2>
+        <div class="text">
+          <h2 class="text-1">Find <span>After School</span></h2>
+          <h2 class="text-2">activities here.</h2>
+        </div>
       </div>
       <section class="main-catalog">
         <div class="filter-container">
@@ -63,7 +65,7 @@
             </button>
           </div>
         </div>
-        <div class="catalog-body">
+        <div class="catalog-body page">
           <div class="catalog-header">
             <h2>All Lessons</h2>
             <label class="search-input" for="search">
@@ -112,11 +114,13 @@
         </div>
       </section>
     </div>
-    <div class="shopping-cart-page">
+    <div v-else class="shopping-cart-page">
       <div class="hero-banner">
-        <h2 class="text-1">Shopping Cart</h2>
+        <div class="text">
+          <h2 class="text-1">Shopping Cart</h2>
+        </div>
       </div>
-      <section class="main-catalog">
+      <section class="main-catalog page">
         <div class="catalog-body">
           <div class="catalog-header">
             <h2>All Selected Lessons</h2>
@@ -159,6 +163,24 @@
           </div>
         </div>
       </section>
+      <section class="checkout-box page">
+        <div class="inner">
+          <h2>Checkout</h2>
+          <form>
+            <label for="name">
+              Name
+              <input type="text" name="name" id="name">
+            </label>
+            <label for="name">
+              Phone
+              <input type="number" name="phone" id="phone">
+            </label>
+            <button type="button" class="primary-btn">
+              Checkout
+            </button>
+          </form>
+        </div>
+      </section>
     </div>
   </div>
   <script>
@@ -166,7 +188,8 @@
       el: '#app',
       data: {
         lessons: lessons,
-        cart: []
+        cart: [],
+        showLessons: true
       },
       methods: {
       }

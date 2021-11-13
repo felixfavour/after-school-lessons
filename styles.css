@@ -22,6 +22,10 @@ button {
   cursor: pointer;
   padding: 0 24px;
 }
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
 .primary-btn {
   background: #00B2FF;
   color: #FFFFFF;

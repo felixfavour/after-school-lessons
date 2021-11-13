@@ -175,13 +175,13 @@
           <form>
             <label for="name">
               Name
-              <input type="text" name="name" id="name">
+              <input type="text" v-model.trim="name" name="name" id="name">
             </label>
             <label for="name">
               Phone
-              <input type="number" name="phone" id="phone">
+              <input type="number" v-model.number="phone" name="phone" id="phone">
             </label>
-            <button type="button" class="primary-btn">
+            <button v-bind:disabled="!checkoutInfoValid" type="button" class="primary-btn" v-on:click="submitOrder">
               Checkout
             </button>
           </form>
@@ -198,7 +198,9 @@
         cart: [],
         sortingType: 'nothing',
         sortingDirection: 'asc',
-        showLessons: true
+        showLessons: true,
+        name: '',
+        phone: ''
       },
       methods: {
         addToCart: function (lesson) {
@@ -221,6 +223,9 @@
           this.sortingDirection = dir
           const lessonsCopy = this.lessons.slice(0)
           this.lessons = lessonsCopy.reverse()
+        },
+        submitOrder: function () {
+          alert('Thank you, your order has been submitted.')
         },
         sortLessons: function (type) {
           this.sortingType = type
@@ -272,6 +277,11 @@
       computed: {
         showCheckout () {
           return this.cart.length > 0
+        },
+        checkoutInfoValid () {
+          const nameRegex = /^[a-z A-Z]+$/
+          const phoneRegex = /^[\d]+$/
+          return nameRegex.test(this.name) && phoneRegex.test(this.phone)
         }
       }
     });

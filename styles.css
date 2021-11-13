@@ -22,10 +22,22 @@ button {
   cursor: pointer;
   padding: 0 24px;
   transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 button:disabled {
   cursor: not-allowed;
   opacity: 0.4;
+}
+.dark-inverse-btn {
+  background: #FFFFFF;
+  color: #00577C;
+}
+.inverse-btn {
+  background: #FFFFFF;
+  color: #00B2FF;
 }
 .primary-btn {
   background: #00B2FF;
@@ -35,13 +47,9 @@ button:disabled {
   background: #00577C;
   color: #FFFFFF;
 }
-.dark-inverse-btn {
-  background: #FFFFFF;
-  color: #00577C;
-}
-.inverse-btn {
-  background: #FFFFFF;
-  color: #00B2FF;
+.dark-primary-btn:disabled {
+  opacity: 1;
+  cursor: pointer;
 }
 .outlined-btn {
   background: #FFFFFF;
@@ -170,6 +178,7 @@ button:disabled {
   border: 1px solid #E5E5E5;
   border-radius: 20px;
   color: #00577C;
+  animation: come-up 0.5s ease-in-out;
 }
 .lesson-card > img {
   width: 100%;
@@ -371,5 +380,17 @@ button:disabled {
   }
   .checkout-box form {
     width: 300px;
+  }
+}
+
+/* Animations */
+@keyframes come-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+}
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
   }
 }

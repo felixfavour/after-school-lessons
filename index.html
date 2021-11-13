@@ -195,6 +195,7 @@
       data: {
         lessons: lessons,
         lessonsCopy: lessons,
+        filterableLessons: lessons,
         cart: [],
         sortingType: 'nothing',
         sortingDirection: 'asc',
@@ -225,7 +226,7 @@
           this.lessons = lessonsCopy.reverse()
         },
         searchLessons (query) {
-          const lessonsCopy = this.lessons.slice(0)
+          const lessonsCopy = this.lessonsCopy.slice(0)
           if (query === '') {
             this.lessons = this.lessonsCopy
           } else {       

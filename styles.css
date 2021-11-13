@@ -21,6 +21,7 @@ button {
   font-size: 15px;
   cursor: pointer;
   padding: 0 24px;
+  transition: 0.2s;
 }
 button:disabled {
   cursor: not-allowed;
@@ -46,6 +47,9 @@ button:disabled {
   background: #FFFFFF;
   color: #00B2FF;
   border: 1px solid #00B2FF;
+}
+.remove-btn:hover {
+  background: #FF0000;
 }
 .page {
   padding: 0 5%;
@@ -204,7 +208,7 @@ button:disabled {
 
 /* Shopping cart page */
 .shopping-cart-page .page {
-  padding: 0 15%;
+  padding: 0 10%;
 }
 .shopping-cart-page .catalog-body {
   flex-basis: 100%;

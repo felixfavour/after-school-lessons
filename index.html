@@ -231,7 +231,7 @@
             this.lessons = this.lessonsCopy
           } else {       
             this.lessons = lessonsCopy.filter(function (lesson) {
-              return JSON.stringify(lesson).toLowerCase().includes(query)
+              return JSON.stringify(lesson).toLowerCase().includes(query.toLowerCase())
             })
           }
         },

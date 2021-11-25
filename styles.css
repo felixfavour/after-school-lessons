@@ -213,6 +213,24 @@ button:disabled {
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.come-up {
+  animation: come-up 0.2s ease-in-out;
+  -webkit-animation: come-up 0.2s ease-in-out;
+}
+.lesson-spaces.lightblue {
+  color: #00B2FF;
+}
+.lesson-spaces.red {
+  color: #FF0000;
+}
+.lesson-spaces.fade {
+  opacity: 0.5;
 }
 
 /* Shopping cart page */

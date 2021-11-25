@@ -94,8 +94,17 @@
                   <div class="lesson-location">
                     {{ lesson.location }}
                   </div>
-                  <div class="lesson-spaces">
+                  <div v-if="lesson.spaces >= 5" class="lesson-spaces">
                     {{ lesson.spaces }} spaces
+                  </div>
+                  <div v-else-if="lesson.spaces >= 2" class="lesson-spaces lightblue come-up">
+                    {{ lesson.spaces }} spaces left!
+                  </div>
+                  <div v-else-if="lesson.spaces === 1" class="lesson-spaces red">
+                    Only one space left!
+                  </div>
+                  <div v-else class="lesson-spaces fade">
+                    No spaces left
                   </div>
                 </div>
                 <div class="lesson-info-bottom">

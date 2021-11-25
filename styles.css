@@ -29,7 +29,7 @@ button {
 }
 button:disabled {
   cursor: not-allowed;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .dark-inverse-btn {
   background: #FFFFFF;
@@ -265,21 +265,39 @@ button:disabled {
   display: block;
   width: 100%;
   text-align: left;
+  margin-bottom: 16px;
 }
 .checkout-box label > input {
   margin-top: 8px;
-  margin-bottom: 16px;
+  padding: 0 5%;
   display: block;
   height: 40px;
-  width: 100%;
+  width: 90%;
   outline: none;
   background: #FFFFFF;
+  transition: 0.3s;
   border: 1px solid rgba(0, 87, 124, 0.31);
   border-radius: 6px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.checkout-box label > span {
+  display: none;
+}
+.checkout-box .error-input > input {
+  border: 1px solid #FF0000;
+}
+.checkout-box .error-input > span {
+  display: block;
+  color: #FF0000;
+  font-size: 14px;
 }
 .checkout-box .primary-btn {
-  margin: 24px 0;
+  margin: 24px auto;
   margin-top: 5%;
+  padding: 0 8px;
   justify-content: center;
 }
 
@@ -406,9 +424,9 @@ button:disabled {
   0% {
     opacity: 0;
     transform: translateY(20px);
-}
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
